@@ -3,3 +3,7 @@
 <p>
     This project uses Laravel (php) for backend framework, Reactjs for frontend and MySql for RDBMS.
 </p>
+Building Process
+<code>
+    Clone the project
+</code>
