@@ -4,6 +4,5 @@
     This project uses Laravel (php) for backend framework, Reactjs for frontend and MySql for RDBMS.
 </p>
 Building Process:</br>
-<code>
-    Clone the Project: git clone https://github.com/moon672/cse-303-1-spring-2021-group-3.git</br>
-</code>
+Clone the Project: <code>git clone https://github.com/moon672/cse-303-1-spring-2021-group-3.git</code></br>
+
