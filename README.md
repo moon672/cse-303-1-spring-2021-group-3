@@ -26,7 +26,7 @@ Run <code>php artisan serve</code> command on terminal</br>
     <li>Md Zahidul Islam - 1721883</li>
     <li>B.M. Fahim Abrar - 1630263</li>
     <li>Md. Tarek Aziz - 1730050</li>
-    <li></li>
-    <li></li>
+    <li>Toufiq Ahmed Niloy - 1631281</li>
+    <li>Shahnewaz Muhammad Rajit - 1630736</li>
     <li></li>
 </ul>
