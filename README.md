@@ -8,3 +8,13 @@ Clone the Project: <code>git clone https://github.com/moon672/cse-303-1-spring-2
 Install Laravel Breeze Authentication Kit: <code>composer require laravel/breeze --dev;php artisan breeze:install;npm install;npm run dev</code>
 Install Reactjs Scaffold: <code>composer require laravel/ui;php artisan ui react --auth;npm install;npm run dev</code>
 
+Project Members:
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
