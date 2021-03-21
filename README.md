@@ -7,7 +7,7 @@ This project uses Laravel (php) for backend framework, Reactjs for frontend and 
 Install <code><a href="https://nodejs.org/en/download/">Nodejs 14.16.0 (LTS)</a></code>, <code><a href="https://www.apachefriends.org/index.html">Xampp 8.0.3 for PHP, MySql and Phpmyadmin</a></code> and <code><a href="https://getcomposer.org/download/">Composer Package Manager for Laravel</a></code>.<br/>
 
 <h4>Building Process:</h4>
-<bold>OPEN POWER SHELL OR COMMAND PROMPT FROM WITHIN THE PROJECT DIRECTORY AND RUN THE FOLLOWING COMMANDS</bold>
+<bold>OPEN POWER SHELL OR COMMAND PROMPT FROM WITHIN THE PROJECT DIRECTORY AND RUN THE FOLLOWING COMMANDS</bold><br/>
 <!-- Clone the Project: <code>git clone https://github.com/moon672/cse-303-1-spring-2021-group-3.git</code></br>
 Install Laravel Breeze Authentication Kit: <code>composer require laravel/breeze --dev;php artisan breeze:install;npm install;npm run dev</code></br>
 Install Reactjs Scaffold: <code>composer require laravel/ui;php artisan ui react --auth;npm install;npm run dev</code><br/> -->
