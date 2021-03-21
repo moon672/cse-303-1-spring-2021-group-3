@@ -1,8 +1,11 @@
 <h1>Student Progress Monitoring System</h1>
 <h3>By Group 3, Section 1</h3>
-<p>
-    This project uses Laravel (php) for backend framework, Reactjs for frontend and MySql for RDBMS.
-</p>
+
+This project uses Laravel (php) for backend framework, Reactjs for frontend and MySql for RDBMS.</br>
+
+<h4>Before Building</h4>
+Install <code><a href="https://nodejs.org/en/download/">Nodejs 14.16.0 (LTS)</a></code>, <code><a href="https://www.apachefriends.org/index.html">Xampp 8.0.3 for PHP, MySql and Phpmyadmin</a></code> and <code><a href="https://getcomposer.org/download/">Composer Package Manager for Laravel</a></code>.<br/>
+
 <h4>Building Process:</h4>
 <!-- Clone the Project: <code>git clone https://github.com/moon672/cse-303-1-spring-2021-group-3.git</code></br>
 Install Laravel Breeze Authentication Kit: <code>composer require laravel/breeze --dev;php artisan breeze:install;npm install;npm run dev</code></br>
