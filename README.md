@@ -23,6 +23,7 @@ Run <code>php artisan serve</code> command on terminal</br>
 
 <h4>Project Members:</h4>
 <ul>
+    <li>DataBase Group 3 </li>
     <li>Mahfuzur Rahman - 1811077</li>
     <li>Md Zahidul Islam - 1721883</li>
     <li>B.M. Fahim Abrar - 1630263</li>
