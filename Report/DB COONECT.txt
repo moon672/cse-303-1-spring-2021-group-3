@@ -1,0 +1,4 @@
+connection string to DB:
+cse303group3.cetoaowgyksh.ap-south-1.rds.amazonaws.com,1433
+admin
+admin123X
