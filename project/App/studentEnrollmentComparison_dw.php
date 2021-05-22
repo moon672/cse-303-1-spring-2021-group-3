@@ -1,5 +1,5 @@
 <?php
-	include("../admin_template_top.php");
+	include("admin_template_top.php");
     
 
 ?>
@@ -174,5 +174,5 @@
 						
 						
 <?php
-	include("../new_template_bottom.php");
+	include("new_template_bottom.php");
 ?>

@@ -1,5 +1,5 @@
 <?php
-	include("../admin_template_top.php");
+	include("admin_template_top.php");
     
 
 ?>
@@ -36,7 +36,7 @@
                                             <thead>
                                             <tr>
                                             <th class="text-center">Serial</th>
-                                                <th class="text-center">Department</th>                                                
+                                                <th class="text-center">School</th>                                                
                                                 <th class="text-center">Student Enrollment Count</th>
                                                 
                                             </tr>
@@ -53,28 +53,26 @@
 
                                                 
                                                 //$sql = "SELECT prog.programid,  COUNT(*) as studentcount from tblstudent stu JOIN tblprogram prog on stu.programid = prog.programid GROUP by prog.programid";
-                                                $sql = "SELECT stu.semesterid, prog.departmentid, COUNT(*) as studentcount from tblstudent stu JOIN tblprogram prog on stu.programid = prog.programid GROUP by stu.semesterid, prog.departmentid";
+                                                $sql = "SELECT stu.semesterid, dept.schoolid, COUNT(*) as studentcount from tblstudent stu JOIN tbldepartment dept on stu.departmentid = dept.departmentid GROUP by stu.semesterid, dept.schoolid";
                                                 $result = $dbConnect-> query($sql);
                                                 $i=1;
                                                 $array_programid=array();
                                                 $array_cse_studentcount=array();
                                                 $array_eee_studentcount=array();
-                                                $array_mis_studentcount=array();
+                                                
                                                 $array_semesterid=array();
                                                 
                                                 if($result-> num_rows>0){
                                                     while($row = $result->fetch_assoc()){
                                                        // echo "<tr> yes </tr>";
                                                        //array_push($array_programid,$row["programid"]);
-                                                       if(str_contains($row["departmentid"],"CSE")){
+                                                       if(str_contains($row["schoolid"],"SBE")){
                                                             array_push($array_cse_studentcount,$row["studentcount"]);
                                                        }
-                                                       if(str_contains($row["departmentid"],"EEE")){
+                                                       if(str_contains($row["schoolid"],"SETS")){
                                                             array_push($array_eee_studentcount,$row["studentcount"]);
                                                         }
-                                                        if(str_contains($row["departmentid"],"MIS")){
-                                                            array_push($array_mis_studentcount,$row["studentcount"]);
-                                                        }
+                                                        
                                                         if (!array_key_exists($row["semesterid"],$array_semesterid)){
                                                             array_push($array_semesterid,$row["semesterid"]);
                                                         }
@@ -82,7 +80,7 @@
                                                         echo "<tr>
                                                         <td class='text-center text-muted'>".$i."</td>
                                                         
-                                                        <td class='text-center'>".$row["departmentid"]."</td>
+                                                        <td class='text-center'>".$row["schoolid"]."</td>
                                                         <td class='text-center'>".$row["studentcount"]."</td>
                                                         
                                                     </tr>";
@@ -91,7 +89,7 @@
                                                     $res_programid = json_encode($array_programid);
                                                     $res_cse_studentCount = json_encode($array_cse_studentcount);
                                                     $res_eee_studentCount = json_encode($array_eee_studentcount);
-                                                    $res_mis_studentCount = json_encode($array_mis_studentcount);
+                                                    //$res_mis_studentCount = json_encode($array_mis_studentcount);
                                                     $res_semesterid = json_encode($array_semesterid);
                                                 }
                                             ?>
@@ -131,7 +129,7 @@
                         labels: <?php echo $res_semesterid; ?>,
                         datasets: [
                             {
-                                label: 'CSE',
+                                label: 'SBE',
                                 backgroundColor: '#49e2ff',
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
@@ -139,20 +137,12 @@
                                 data: <?php echo $res_cse_studentCount; ?>
                             },
                             {
-                                label: 'EEE',
+                                label: 'SETS',
                                 backgroundColor: '#9e49ff',
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
                                 hoverBorderColor: '#666666',
                                 data: <?php echo $res_eee_studentCount; ?>
-                            },
-                            {
-                                label: 'MIS',
-                                backgroundColor: '#ffc249',
-                                borderColor: '#46d5f1',
-                                hoverBackgroundColor: '#CCCCCC',
-                                hoverBorderColor: '#666666',
-                                data: <?php echo $res_mis_studentCount; ?>
                             }
 
                         ]
@@ -174,5 +164,5 @@
 						
 						
 <?php
-	include("../new_template_bottom.php");
+	include("new_template_bottom.php");
 ?>
