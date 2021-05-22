@@ -94,7 +94,7 @@
                                                        if(str_contains($row["courseid"],"MIS 441")){
                                                        array_push($array_mis441_gpa,$row["gpa"]);
                                                        }
-                                                        if (!array_key_exists($row["semesterid"],$array_semesterid)){
+                                                        if (!in_array($row["semesterid"],$array_semesterid)){
                                                             array_push($array_semesterid,$row["semesterid"]);
                                                         }
                                                        
