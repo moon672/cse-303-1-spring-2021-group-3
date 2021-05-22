@@ -67,6 +67,8 @@
                                                 $array_courseid=array();
                                                 $array_cse211_gpa=array();
                                                 $array_cse303_gpa=array();
+                                                $array_cse307_gpa=array();
+                                                $array_cse309_gpa=array();
                                                 $array_eee131_gpa=array();
                                                 $array_eee132_gpa=array();
                                                 $array_mis341_gpa=array();
@@ -81,6 +83,12 @@
                                                        }
                                                        if(str_contains($row["courseid"],"CSE 303")){
                                                         array_push($array_cse303_gpa,$row["gpa"]);
+                                                       }
+                                                       if(str_contains($row["courseid"],"CSE 307")){
+                                                        array_push($array_cse307_gpa,$row["gpa"]);
+                                                       }
+                                                       if(str_contains($row["courseid"],"CSE 309")){
+                                                        array_push($array_cse309_gpa,$row["gpa"]);
                                                        }
                                                        if(str_contains($row["courseid"],"EEE 131")){
                                                        array_push($array_eee131_gpa,$row["gpa"]);
@@ -110,6 +118,8 @@
                                                     $res_courseid = json_encode($array_courseid);
                                                     $res_cse211_gpa = json_encode($array_cse211_gpa);
                                                     $res_cse303_gpa = json_encode($array_cse303_gpa);
+                                                    $res_cse307_gpa = json_encode($array_cse307_gpa);
+                                                    $res_cse309_gpa = json_encode($array_cse309_gpa);
                                                     $res_eee131_gpa = json_encode($array_eee131_gpa);
                                                     $res_eee132_gpa = json_encode($array_eee132_gpa);
                                                     $res_mis341_gpa = json_encode($array_mis341_gpa);
@@ -167,6 +177,22 @@
                                 hoverBackgroundColor: '#F0F0F0',
                                 hoverBorderColor: '#666666',
                                 data: <?php echo $res_cse303_gpa; ?>
+                            },
+                            {
+                                label: 'CSE 307',
+                                backgroundColor: '#111EEE',
+                                borderColor: '#46d5f1',
+                                hoverBackgroundColor: '#33RRRR',
+                                hoverBorderColor: '#666666',
+                                data: <?php echo $res_cse307_gpa; ?>
+                            },
+                            {
+                                label: 'CSE 309',
+                                backgroundColor: '#555QQ1',
+                                borderColor: '#46d5f1',
+                                hoverBackgroundColor: '#LOK000',
+                                hoverBorderColor: '#666666',
+                                data: <?php echo $res_cse309_gpa; ?>
                             },
                             {
                                 label: 'EEE 131',
