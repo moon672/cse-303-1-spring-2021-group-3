@@ -6,6 +6,7 @@
 
 
 ?>
+
 <html lang="en">
 
 <head>
@@ -161,24 +162,70 @@
 					<!--Side Bars-->
 					<div class="scrollbar-sidebar">
                         <div class="app-sidebar__inner">
-                            <ul class="vertical-nav-menu">
+                            <ul class="vertical-nav-menu" >
 							
 								<!--Dashboard Info-->
 								<li class="app-sidebar__heading">Dashboard</li>
 								<li>
-                                    <a href="admin_index.php">
-                                        <i class="metismenu-icon pe-7s-graph2"></i>
+                                    <a href="admin_index.php" style="padding:0">
+                                        <!-- <i class="metismenu-icon pe-7s-graph2"></i> -->
                                         Common Dashboard
                                     </a>
                                 </li>
+                                <li class="app-sidebar__heading">Report</li>
+                                <!--fahim-->
 								<li>
-                                    <a href="userProfile.php">
-                                        <i class="metismenu-icon pe-7s-graph2"></i>
-                                        User Profile
+                                    <a href="coursewise.php" style="padding:0">
+                                        <!-- <i class="metismenu-icon pe-7s-graph2"></i> -->
+                                        Course Wise Student Performance
                                     </a>
                                 </li>
-								
-																
+                                <!--fidda-->
+                                <li>
+                                    <a href="studentEnrollmentComparison_pw.php" style="padding:0">
+                                        <!-- <i class="metismenu-icon pe-7s-graph2"></i> -->
+                                        Program Wise Student Enrollment
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="studentEnrollmentComparison_dw.php" style="padding:0">
+                                        <!-- <i class="metismenu-icon pe-7s-graph2"></i> -->
+                                        Department Wise Student Enrollment
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="studentEnrollmentComparison_sw.php" style="padding:0">
+                                        <!-- <i class="metismenu-icon pe-7s-graph2"></i> -->
+                                        School Wise Student Enrollment
+                                    </a>
+                                </li>
+								<!--Niloy-->
+                                <li>
+                                    <a href="programwise.php" style="padding:0">
+                                        <!-- <i class="metismenu-icon pe-7s-graph2"></i> -->
+                                        Program Wise Student Performance
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="departmentwise.php" style="padding:0">
+                                        <!-- <i class="metismenu-icon pe-7s-graph2"></i> -->
+                                        Department Wise Student Performance
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Schoolwise.php" style="padding:0">
+                                        <!-- <i class="metismenu-icon pe-7s-graph2"></i> -->
+                                        School Wise Student Performance
+                                    </a>
+                                </li>
+                                <!--zahidul-->
+                                <li>
+                                    <a href="instructorwise.php" style="padding:0">
+                                        <!-- <i class="metismenu-icon pe-7s-graph2"></i> -->
+                                        Instructor Wise Student Performance
+                                    </a>
+                                </li>
+                                					
 								<!--Library Info-->
 								<li class="app-sidebar__heading">Library</li>
 								

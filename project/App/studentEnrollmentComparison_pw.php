@@ -1,5 +1,5 @@
 <?php
-	include("../admin_template_top.php");
+	include("admin_template_top.php");
     
 
 ?>
@@ -36,7 +36,7 @@
                                             <thead>
                                             <tr>
                                             <th class="text-center">Serial</th>
-                                                <th class="text-center">Department</th>                                                
+                                                <th class="text-center">Program</th>                                                
                                                 <th class="text-center">Student Enrollment Count</th>
                                                 
                                             </tr>
@@ -53,7 +53,7 @@
 
                                                 
                                                 //$sql = "SELECT prog.programid,  COUNT(*) as studentcount from tblstudent stu JOIN tblprogram prog on stu.programid = prog.programid GROUP by prog.programid";
-                                                $sql = "SELECT stu.semesterid, prog.departmentid, COUNT(*) as studentcount from tblstudent stu JOIN tblprogram prog on stu.programid = prog.programid GROUP by stu.semesterid, prog.departmentid";
+                                                $sql = "SELECT stu.semesterid, prog.programid, COUNT(*) as studentcount from tblstudent stu JOIN tblprogram prog on stu.programid = prog.programid GROUP by stu.semesterid, prog.programid";
                                                 $result = $dbConnect-> query($sql);
                                                 $i=1;
                                                 $array_programid=array();
@@ -66,13 +66,13 @@
                                                     while($row = $result->fetch_assoc()){
                                                        // echo "<tr> yes </tr>";
                                                        //array_push($array_programid,$row["programid"]);
-                                                       if(str_contains($row["departmentid"],"CSE")){
+                                                       if(str_contains($row["programid"],"CSE")){
                                                             array_push($array_cse_studentcount,$row["studentcount"]);
                                                        }
-                                                       if(str_contains($row["departmentid"],"EEE")){
+                                                       if(str_contains($row["programid"],"EEE")){
                                                             array_push($array_eee_studentcount,$row["studentcount"]);
                                                         }
-                                                        if(str_contains($row["departmentid"],"MIS")){
+                                                        if(str_contains($row["programid"],"MIS")){
                                                             array_push($array_mis_studentcount,$row["studentcount"]);
                                                         }
                                                         if (!array_key_exists($row["semesterid"],$array_semesterid)){
@@ -82,7 +82,7 @@
                                                         echo "<tr>
                                                         <td class='text-center text-muted'>".$i."</td>
                                                         
-                                                        <td class='text-center'>".$row["departmentid"]."</td>
+                                                        <td class='text-center'>".$row["programid"]."</td>
                                                         <td class='text-center'>".$row["studentcount"]."</td>
                                                         
                                                     </tr>";
@@ -131,7 +131,7 @@
                         labels: <?php echo $res_semesterid; ?>,
                         datasets: [
                             {
-                                label: 'CSE',
+                                label: 'BSc in CSE',
                                 backgroundColor: '#49e2ff',
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
@@ -139,7 +139,7 @@
                                 data: <?php echo $res_cse_studentCount; ?>
                             },
                             {
-                                label: 'EEE',
+                                label: 'BSc in EEE',
                                 backgroundColor: '#9e49ff',
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
@@ -147,7 +147,7 @@
                                 data: <?php echo $res_eee_studentCount; ?>
                             },
                             {
-                                label: 'MIS',
+                                label: 'BSc in MIS',
                                 backgroundColor: '#ffc249',
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
@@ -174,5 +174,5 @@
 						
 						
 <?php
-	include("../new_template_bottom.php");
+	include("new_template_bottom.php");
 ?>
